@@ -1,1 +1,14 @@
+Gcc-inline assembly:
 http://ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html
+
+Real world example:
+http://lingrok.org/xref/linux-linus/tools/perf/arch/x86/util/tsc.c#41
+
+Wiki on RDTSC:
+The Time Stamp Counter (TSC) is a 64-bit register present on all x86 processors since the Pentium. It counts the number of cycles since reset. The instruction RDTSC returns the TSC in EDX:EAX. In x86-64 mode, RDTSC also clears the higher 32bits of RAX and RDX.
+
+output operand constraint should have a constraint modifier "=". And this modifier says that it is the output operand and is write-only.
+
+If our assembly statement must execute where we put it, (i.e. must not be moved out of a loop as an optimization), put the keyword volatile after asm and before the ()’s. So to keep it from moving, deleting and all, we declare it as
+
+asm volatile ( ... : ... : ... : ...);
