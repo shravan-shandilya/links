@@ -1,0 +1,8 @@
+Link:
+https://xorl.wordpress.com/2010/10/14/linux-glibc-stack-canary-values/
+
+Compile using -fstack-protector-all flag.
+$ gcc hello.c -fstack-protector-all -o hello
+$ gdb hello
+$ start
+$ disass main

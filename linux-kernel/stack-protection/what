@@ -1,0 +1,15 @@
+Wiki:
+https://en.wikipedia.org/wiki/Buffer_overflow_protection#GCC_Stack-Smashing_Protector_.28ProPolice.29
+
+Extract:
+Typically, buffer overflow protection modifies the organization of stack-allocated data so it includes a canary value that, when destroyed by a stack buffer overflow, shows that a buffer preceding it in memory has been overflowed. By verifying the canary value, execution of the affected program can be terminated, preventing it from misbehaving or from allowing an attacker to take control over it. Other buffer overflow protection techniques include bounds checking, which checks accesses to each allocated block of memory so they cannot go beyond the actually allocated space, and tagging, which ensures that memory allocated for storing data cannot contain executable code.
+
+
+Terminator canaries:
+USing null,CR,LF or -1 for canary value.The problem is canary is know.But,I dont understand how this will help?.Wiki says it will prevent attacks using strcpy() or any other function that returns on null character.
+That is perfectly fine.But,how can we terminate the program who is corrupting canary value.
+
+Random canaries:
+Randomly generated value is stored in canary and is a global variable.The program will know what it set for the canary.if this was corrupted,then maybe we can terminate this program to avoid using corrupted value.
+
+
