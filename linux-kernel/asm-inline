@@ -12,3 +12,39 @@ output operand constraint should have a constraint modifier "=". And this modifi
 If our assembly statement must execute where we put it, (i.e. must not be moved out of a loop as an optimization), put the keyword volatile after asm and before the ()’s. So to keep it from moving, deleting and all, we declare it as
 
 asm volatile ( ... : ... : ... : ...);
+
+ asm ( assembler template 
+           : output operands                  /* optional */
+           : input operands                   /* optional */
+           : list of clobbered registers      /* optional */     
+           );
+
+The assembler template consists of assembly instructions. Each operand is described by an operand-constraint string followed by the C expression in parentheses. A colon separates the assembler template from the first output operand and another separates the last 
+output operand from the first input, if any. Commas separate the operands within each group. The total number of operands is limited to ten or to the maximum number of operands in any instruction pattern in the machine description, whichever is greater.
+
+
+Example from link1: 
+
+ int a=10, b;
+        asm ("movl %1, %%eax; 
+              movl %%eax, %0;"
+             :"=r"(b)        /* output */
+             :"r"(a)         /* input */
+             :"%eax"         /* clobbered register */
+             );       
+Here what we did is we made the value of ’b’ equal to that of ’a’ using assembly instructions. Some points of interest are:
+
+"b" is the output operand, referred to by %0 and "a" is the input operand, referred to by %1.
+"r" is a constraint on the operands. We’ll see constraints in detail later. For the time being, "r" says to GCC to use any register for storing the operands. output operand constraint should have a constraint modifier "=". And this modifier says that it is the output operand and is write-only.
+There are two %’s prefixed to the register name. This helps GCC to distinguish between the operands and registers. operands have a single % as prefix.
+The clobbered register %eax after the third colon tells GCC that the value of %eax is to be modified inside "asm", so GCC won’t use this register to store any other value.
+
+Real example:
+
+1.Local IRQ disable
+asm volatile("cli": : :"memory")          //arch specific
+
+2.Local IRQ enable
+asm volatile("sti": : :"memory")          //arch specific
+
+
