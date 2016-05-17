@@ -1,0 +1,20 @@
+Using /bin/bash as the init program:
+1. Pass init as command line arguement to kernel
+  init=/bin/bash
+2. Lot of things are not done yet(since we changed the init program with bash shell)
+  #mount                  (check for mounts if / is not mounted,mount it)
+  #fdisk -l               (to list partition table)
+  #vi /etc/fstab          (look at fstab to get more info)
+  #mount /dev/sd<a/b> /   (Mount on /)
+3.Do whatever you want. (theres no limit to the imagination)
+
+
+Boot direclty into Single user mode:
+1.On grub prompt,hit "e" to edit boot args.
+2.Find the line having information about kernel.
+3.Add "single" to the line and boot
+4.This will be usefull if grub is not secured by a password(which was the case when I last tried with ubuntu 14.04).
+5.After boot you might directly enter as root user.If not first method is supposed to work.
+6.Do whatever you want.
+
+If any of this doesnot work,I would be very glad.
