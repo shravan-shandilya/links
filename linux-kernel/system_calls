@@ -1,6 +1,10 @@
 Link:
 http://lingrok.org/xref/linux-linus/arch/arm/include/uapi/asm/unistd.h
 
+System call table:
+http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html
+http://www.digilife.be/quickreferences/qrc/linux%20system%20call%20quick%20reference.pdf
+
 
 Not implemented syscall:
 http://lingrok.org/xref/linux-linus/kernel/sys_ni.c#14
