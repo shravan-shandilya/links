@@ -1,2 +1,6 @@
 Link:
 http://lingrok.org/xref/linux-linus/arch/arm/include/uapi/asm/unistd.h
+
+
+Not implemented syscall:
+http://lingrok.org/xref/linux-linus/kernel/sys_ni.c#14
