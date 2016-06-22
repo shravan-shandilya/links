@@ -1,3 +1,6 @@
+Extract of linux-inside article and Duartes blog.
+
+
 POST-> Power good signal -> Reset Vector(0xfffffff0)
 Reset vector hardwired to 0xfffffff0 
 
@@ -10,3 +13,20 @@ Power button -> 0xfffffff0 -> 0xf0000
 Link:
 http://duartes.org/gustavo/blog/post/how-computers-boot-up/
 
+Protected Mode(32 bit address lines,4gb address space)
+Memory Management in Protected mode >> 
+1. Segmentation 
+  * Dividing Virtual address space into large segments 
+  * addressing = base_address*16+offset
+  * Memory segmentation was completely redone in protected mode. 
+    There are no 64 Kilobyte fixed-size segments. Instead, the size
+    and location of each segment is described by an associated data 
+    structure called Segment Descriptor. The segment descriptors are 
+    stored in a data structure called Global Descriptor Table (GDT).
+    GDT is better explained at https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-2.html
+    
+
+2. Paging 
+  * Dividing into virtual address into pages and physical memory to frames
+  * addressing = recursively traverse three(?) tables to get actual address. (TLB)
+  
