@@ -1,0 +1,12 @@
+POST-> Power good signal -> Reset Vector(0xfffffff0)
+Reset vector hardwired to 0xfffffff0 
+
+Only 1Mb is addressable ( 0x00000 to 0xfffff) --> Real mode (no paging)
+At reset vector there will be a jump to this area ( 0xf0000 to be exact)
+
+Flow: 
+Power button -> 0xfffffff0 -> 0xf0000 
+
+Link:
+http://duartes.org/gustavo/blog/post/how-computers-boot-up/
+
