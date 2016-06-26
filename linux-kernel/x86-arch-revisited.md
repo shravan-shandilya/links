@@ -16,6 +16,7 @@ CR0:
   31 	PG 	  Paging 	                If 1, enable paging and use the CR3 register, else disable paging
 
 [Usage of PE bit to evolve to Protected mode(in u-boot)](http://lingrok.org/xref/u-boot/arch/x86/cpu/start16.S#43)
+[Disabling Pagin](http://lingrok.org/xref/linux-linus/arch/x86/boot/compressed/efi_thunk_64.S#124)
 
 CR1:
 Reserved
