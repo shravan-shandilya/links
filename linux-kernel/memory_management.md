@@ -30,6 +30,7 @@ Virtual Address Space:
   - One physical memory can be mapped to two different processes (Shared memory)
 
 MMU:
+<pre>
 +-------------------------------------------------------------+           +--------------+
 |                                                             |           |              |
 |                                                             |           |              |
@@ -62,3 +63,4 @@ MMU:
 
 
 [Thanks to asciiflow.com](http://asciiflow.com/)
+</pre>
