@@ -6,10 +6,9 @@ Single Addressing Space:-
 - One part of memory is mapped to actual physical memory and another part is mapped to peripherals.
 - All processes and Kernel share the same memory address space.
 - No memory protection,Processes stomp each other and kernel.
-- Used in: microcontrollers,ARM COrtex-M
+- Used in: Microcontrollers,ARM Cortex-M
 
 Address spaces:
-
 Physical address space:
 - Used by hardware to talk to one another.
 - DMA
