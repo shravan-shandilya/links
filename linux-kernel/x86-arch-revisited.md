@@ -1,5 +1,6 @@
 Control registers(CR0,CR1,CR2,CR3 and CR4):
 Shamelessly copied from Wikipedia article :P
+<pre>
 CR0:
 * 32bits or 64 bits long
   Bit Name 	Full Name 	            Description
@@ -14,7 +15,7 @@ CR0:
   29 	NW 	  Not-write through 	    Globally enables/disable write-through caching
   30 	CD 	  Cache disable 	        Globally enables/disable the memory cache
   31 	PG 	  Paging 	                If 1, enable paging and use the CR3 register, else disable paging
-
+</pre>
 [Usage of PE bit to evolve to Protected mode(in u-boot)](http://lingrok.org/xref/u-boot/arch/x86/cpu/start16.S#43)
 [Disabling Pagin](http://lingrok.org/xref/linux-linus/arch/x86/boot/compressed/efi_thunk_64.S#124)
 
