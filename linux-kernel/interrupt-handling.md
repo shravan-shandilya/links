@@ -25,3 +25,9 @@ Interrupts and Exceptions:
 * Interrupts: Way to communicate or grab the attention of CPU. (ex: keypress)
 * Exceptions: Special (sometimes faulty) condtion during execution (ex: divide by zero (faulty code), page fault, syscall mechanism)
 
+IDT:
+* Mapping between interrupt number and the address of the interrupt service routine(handler).
+* Base address is stored in IDTR.
+* Entries are called "gates"
+* It can contain interrupt gate,task gate or trap gate.
+
