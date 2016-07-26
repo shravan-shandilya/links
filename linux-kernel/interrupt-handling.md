@@ -20,3 +20,8 @@ Types:
   
 Prioroties:
 Used to select an interrupt to service,if multiple interrupts occur at the same time.
+
+Interrupts and Exceptions:
+* Interrupts: Way to communicate or grab the attention of CPU. (ex: keypress)
+* Exceptions: Special (sometimes faulty) condtion during execution (ex: divide by zero (faulty code), page fault, syscall mechanism)
+
