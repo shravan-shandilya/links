@@ -1,4 +1,5 @@
-Control registers(CR0,CR1,CR2,CR3 and CR4):
+Control registers(CR0,CR1,CR2,CR3 and CR4)
+
 Shamelessly copied from Wikipedia article :P
 <pre>
 CR0:
