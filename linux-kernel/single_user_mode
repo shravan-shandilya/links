@@ -13,8 +13,10 @@ Boot direclty into Single user mode:
 1.On grub prompt,hit "e" to edit boot args.
 2.Find the line having information about kernel.
 3.Add "single" to the line and boot
-4.This will be usefull if grub is not secured by a password(which was the case when I last tried with ubuntu 14.04).
+4.This will be usefull if grub is not secured by a password(which was the case when I last tried with ubuntu 14.04). 
 5.After boot you might directly enter as root user.If not first method is supposed to work.
 6.Do whatever you want.
 
 If any of this doesnot work,I would be very glad.
+
+<UPDATE: Checked on Ubuntu 16.04 Server image,its still working.Just continue to maintainance mode,you'll get root>
