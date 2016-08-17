@@ -36,6 +36,11 @@ Pipes:
    - Close the end of the pipe that is not being used.(i.e. close reading end from writing process)
    - EOF:
      * If writer closes the write descriptor,the reader will get SIGPIPE or EOF when he tries to read using the read desriptor.
+   - Blocking
+    - Read blocks if pipe is empty
+    - Write blocks if pipe is full
+   -Capacity is limited,can be changed using fcntl(fd,F_SETPIPE,size) 
+
 
 
 
