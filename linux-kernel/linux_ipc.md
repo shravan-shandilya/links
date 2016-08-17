@@ -17,7 +17,7 @@ Synchronisation:
  * Futexes
  * Thread synchronisation methods
  
-Pipes:
+[Pipes:](https://youtu.be/8hxb0kwnzGI?t=532)
  * Bytestream: writer can write any number of bytes
  * Unidirectional
  * Two end: write end and read end
@@ -41,6 +41,7 @@ Pipes:
     - Write blocks if pipe is full
    -Capacity is limited,can be changed using fcntl(fd,F_SETPIPE,size) 
 
+[Named FIFO's](https://youtu.be/8hxb0kwnzGI?t=1026)
 
 
 
